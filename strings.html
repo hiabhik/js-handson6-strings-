@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript Handon-6</h2>
+    <h4>Q1.Count Characters</h4>
+     
+    <pre>
+      
+const countCharacters = (S) => 
+{
+
+  let countupperA=0;
+  let countupperD=0;
+  for(let i=0; i< S.length;i++){
+    if(S[i]=="A" )  {
+      countupperA++;
+    }
+    if(S[i] == "D") {
+      countupperD++ ;
+    }
+    
+  }
+  return [countupperA,countupperD];
+    
+}
+ 
+  
+ 
+        
+   </pre>
+    <h4>Q2.Count the Heads</h4>
+        <pre>
+            
+let Count_Occ = (s) => 
+{
+  
+  let sot = sortString(s);
+  
+  let emt=" ";
+  
+  for(let i=0;i< sot.length-1;)
+     
+  {
+    let  count=1,temp;
+    
+    
+        
+    for(j=i+1;j < sot.length;j++){
+      
+      
+      if(sot[i]==sot[j]){
+        count++;
+        
+      }
+      else{
+        temp=j;
+        break;
+      }
+      
+    }
+    if(count>1){
+      emt=emt+sot[i]+count;
+    }
+    i=temp;
+   
+    }
+    
+  return emt;
+     
+  
+};
+
+
+
+function sortString(s) {
+    return s.split('').sort().join('');
+};
+ 
+
+           
+           
+
+       </pre>
+
+    <h4>Q3.Count the Vowels</h4>
+    <pre>
+        
+var Count_Vowels= (S) => 
+{
+    let count=0;
+    let s= S.toLowerCase()
+   for(let  i=0;i < s.length;i++){
+     
+      if((s[i]=="a") || (s[i]=="e") || (s[i]=="i")  || (s[i]=="o" ) || (s[i]=="u" )){
+        
+           count++;
+      }
+      
+   } 
+   return count;
+};
+ 
+
+          
+    </pre>
+    
+    
+    
+    <h4>Q4.Concatenate the Strings</h4>
+    <pre>
+        var Concatenate_Strings = (S1, S2) => 
+        {
+            let s3=S1+S2;
+            return s3;
+        };
+         
+    </pre>
+    
+    
+    
+      <h4>Q5.Find Length</h4>
+<pre>
+        
+const findLength = (s1) => 
+{
+ let s="abcdefghijklmnopqrstuvwxyz"
+let r=s1.toLowerCase()
+let count=0;
+for(let i=0;i < s.length;i++){
+    for(let j=0;j < r.length;j++){
+        if(s[i]==r[j]){
+            count++
+        }
+    }
+}
+return count;
+
+};
+</pre>
+    
+      <h4>Q6.Find the Winner</h4>
+      <pre>
+       
+var Game_Winner = (s) => 
+{
+  
+  let countA=0, countD=0;
+  for(let i=0;i < s.length;i++){
+       if(s[i]=="A"){
+         countA++;
+       }
+       else{
+         countD++
+       }
+  }
+  
+  if(countA>countD){
+    return "Aditya";
+  }
+  else if(countD>countA){
+    return "Danish";
+  }
+  else{
+    return "Draw";
+  }
+};
+ 
+
+          
+      </pre>
+    
+      <h4>Q7.Join Strings</h4>
+      <pre>
+        
+const joinStrings = (S, P) => 
+{
+    let join =S+P;
+    return join;
+};
+ 
+</pre>
+
+<h4>Q8.Plaindrome Check</h4>
+
+<pre>
+   
+var Palin_Check = (str) =>
+{
+  let flag=1;
+for(let i=0;i < parseInt(str.length/2);i++)
+{
+    if(str.length==1){
+        return "True";
+        
+        
+    }
+
+   else if(str[i]!=str[str.length-1-i])
+    {
+      flag=0;
+    }
+
+}
+if(flag==0){
+    return "False";
+}
+else{
+    return "True";
+}
+	 
+}
+
+ </pre>
+    
+
+
+
+<h4>Q9.Reverse the String</h4>
+<pre>
+   
+
+    var Reverse_String = (str) => 
+    {
+      let rev=" ";
+      for(let i=str.length-1;i>=0;i--){
+        rev=rev+str[i];
+       
+      }
+       return rev;
+    };
+     
+    </pre>
+
+
+<h4>Q10.Match the Strings</h4>
+<pre>
+   
+var String_Match = (s1,s2) => 
+{
+   let flag=1;
+   
+   
+   for(let i=0;i < s1.length;i++){
+     if(s1[i]!=s2[i]){
+       flag=0;
+     }
+   }
+ 
+     if(flag==0){
+       return "NO";
+     }
+     else{
+       return "YES";
+     }
+     
+   
+     
+      
+};
+ 
+
+ 
+</pre>
+
+
+    <h4>11.String Replace</h4>
+    <pre>
+    
+var Replace = (s, pattern , text) => 
+{
+     
+     let res=s.replace(pattern,text);
+     return res;
+};
+ 
+
+</pre>
+
+<h4>12.Split the String</h4>
+<pre>
+
+    var Split_the_string = (s) => 
+    {
+      
+    
+      let x=s.split(' ');
+      return x;
+            
+    };
+     
+</pre>
+
+<h4>13.Count the Vowels and Consonants</h4>
+<pre>
+
+    var Count_Vowels= (s) => 
+    {
+      let countv=0;
+      let res=s.toLowerCase();
+      for(let i=0;i< res.length;i++){
+        
+      if((res[i]=="a") || (res[i]=="e") || (res[i]=="i")  || (res[i]=="o" ) || (res[i]=="u" ))
+      {
+            countv++;
+      }
+    }
+      return countv;
+          
+    };
+    
+    
+    var Count_Consonants=(s) = > 
+    {
+      let countn=0;
+      let res=s.toLowerCase();
+      for(let i=0;i < res.length;i++){
+        
+      if((res[i]!="a") && (res[i]!="e") && (res[i]!="i")  && (res[i]!="o" ) && (res[i]!="u" ))
+      {
+            countn++;
+      }
+    }
+      return countn;
+           
+    };
+     
+    
+
+</pre>
+
+</body>
+</html>
